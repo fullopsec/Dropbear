@@ -1,6 +1,8 @@
-INstall Dropbear on Ubuntu 22.04
+Install Dropbear on Ubuntu 22.04:
 
+video : https://www.youtube.com/watch?v=7TLPExkUHqw
 
+commands used:
 sudo apt update
 sudo apt upgrade
 sudo apt install dropbear-initramfs
