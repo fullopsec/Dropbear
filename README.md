@@ -50,33 +50,33 @@ Example:
 	
 ## Create the keys
 
-Generate a new key on the client:
+#### Generate a new key on the client:
 
 	ssh-keygen -t rsa -f ~/.ssh/dropbear 
 	
-Copy the key to the server:
+#### Copy the key to the server:
 
 	scp ~/.ssh/dropbear.pub daniel@192.168.1.36:~/dropbear.pub  	
 	
-Add the key to the initramfs authorized keys:
+#### Add the key to the initramfs authorized keys:
 
 	cat /home/daniel/dropbear.pub >> /etc/dropbear/initramfs/authorized_keys
 
-Stop being root
+#### Stop being root
 
 	exit   
 	
-Update initramfs again
+#### Update initramfs again
 
 	sudo update-initramfs -u
 	
 ## Making an alias (optional)
 
-Edit the bashrc on the client that will remotely unlock the server
+### Edit the bashrc on the client
 
 	nano ~/.bashrc  
 	
-Add the alias:
+### Add the alias
 
 Format:
 
@@ -86,15 +86,15 @@ Exemple:
 
 	alias node2unlock="ssh -i ~/.ssh/dropbear -p 5768 -o 'HostKeyAlgorithms ssh-rsa' root@192.168.1.36 'echo -n test | cryptroot-unlock'"  
 	
-Source the bashrc:	
+### Source the bashrc:	
 
 	source .bashrc
 
-Reboot:
+### Reboot:
 
 	sudo reboot now
 	
-Try to unlock the server with your alias:
+### Try to unlock the server with your alias:
 
 	node2unlock 		
 
