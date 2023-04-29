@@ -1,6 +1,7 @@
  # Dropbear SSH
 
-This code is a set of commands that guides the user on how to install and configure the Dropbear SSH server on an Ubuntu 22.04 machine. The purpose of Dropbear is to allow remote access to the machine during the boot process in case of disk encryption. By installing and configuring Dropbear on the machine, users can unlock encrypted disks remotely using SSH.
+
+This is a set of commands that guides the user on how to install and configure the Dropbear SSH server on an Ubuntu 22.04 machine. The purpose of Dropbear is to allow <strong>remote access</strong> to the machine during the <strong>boot process</strong> in case of <strong>disk encryption</strong>. By installing and configuring Dropbear on the machine, users can <strong>unlock encrypted disks remotely using SSH</strong>.
 
 
 
