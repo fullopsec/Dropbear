@@ -52,11 +52,11 @@ Example:
 
 Generate a new key on the client:
 
-	ssh-keygen -t rsa -f ~/.ssh/dropbear 					#(command to do on the unlocking machine)
-
+	ssh-keygen -t rsa -f ~/.ssh/dropbear 
+	
 Copy the key to the server:
 
-	scp ~/.ssh/dropbear.pub daniel@192.168.1.36:~/dropbear.pub  		#(command to do on the unlocking machine)
+	scp ~/.ssh/dropbear.pub daniel@192.168.1.36:~/dropbear.pub  	
 	
 Add the key to the initramfs authorized keys:
 
@@ -88,7 +88,7 @@ Exemple:
 	
 Source the bashrc:	
 
-	source .bashrc 		#(on the unlocking machine)
+	source .bashrc
 
 Reboot:
 
@@ -98,7 +98,7 @@ Try to unlock the server with your alias:
 
 	node2unlock 		
 
-## manual unlock with no alias:
+## Manual unlock with no alias:
 
 	ssh -i ~/.ssh/dropbear -p <port> -o "HostKeyAlgorithms ssh-rsa" root@<SERVER_IP>
 	cryptroot-unlock
